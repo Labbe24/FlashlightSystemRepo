@@ -4,8 +4,12 @@
     {
         public override void HandleMode(Flashlight f)
         {
-            f.SetHighBeam();
             f.SetState(loState);
+        }
+
+        public override void OnEnter(Flashlight f)
+        {
+            f.SetHighBeam();
         }
     }
 }

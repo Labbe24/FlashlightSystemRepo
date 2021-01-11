@@ -10,5 +10,6 @@ namespace FlashlightGoFState
         protected static OnLowState loState = new OnLowState();
         public abstract void HandlePower(Flashlight f);
         public abstract void HandleMode(Flashlight f);
+        public abstract void OnEnter(Flashlight f);
     }
 }

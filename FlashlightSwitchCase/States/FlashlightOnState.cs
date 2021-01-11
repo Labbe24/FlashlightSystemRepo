@@ -6,7 +6,6 @@ namespace FlashlightGoFState.States
     {
         public override void HandlePower(Flashlight f)
         {
-            f.LightOff();
             f.SetState(offState);
         }
 
@@ -15,8 +14,9 @@ namespace FlashlightGoFState.States
             throw new NotImplementedException();
         }
         
-        public void OnEnter(Flashlight f)
+        public override void OnEnter(Flashlight f)
         {
+            f.LightOn();
             f.SetState(loState);
         }
     }

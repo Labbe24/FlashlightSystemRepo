@@ -6,11 +6,10 @@ namespace FlashlightGoFState
     {
         static void Main(string[] args)
         {
-            Flashlight f = new Flashlight();
+            IFlashlight f = new Flashlight();
             f.Power();
-            f.SetHighBeam();
-            f.Power();
-            f.Power();
+            f.Mode();
+            f.Mode();
             f.Power();
         }
     }

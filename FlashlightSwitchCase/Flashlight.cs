@@ -3,7 +3,7 @@ using FlashlightGoFState.States;
 
 namespace FlashlightGoFState
 {
-    public class Flashlight
+    public class Flashlight : IFlashlight, IFlashlightInternal
     {
         private static FlashlightState _state;
 
@@ -44,6 +44,7 @@ namespace FlashlightGoFState
         public void SetState(FlashlightState s)
         {
             _state = s;
+            _state.OnEnter(this);
         }
     }
 }
